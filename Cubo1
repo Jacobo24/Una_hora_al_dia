@@ -1,0 +1,11 @@
+def cube(n):
+    x = ("/\\")
+    y = ("_\\")
+    z = ("\\/")
+    t = ("_/")
+    jac = [ ]
+    for i in range (1, n+1):
+        jac.append(f"{' '*(n-i)}{x*i}{y*n}")
+    for i in range(n, 0, -1):
+        jac.append(f"{' '*(n-i)}{z*i}{t*n}")
+    return "\n".join(jac)
